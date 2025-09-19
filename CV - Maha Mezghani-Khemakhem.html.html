@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Maha Mezghani-Khemakhem</title>
+    <style>
+        /* Styles de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 0;
+            font-size: 14px;
+        }
+        
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        /* En-tête */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #4a6b8a);
+            color: white;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .header h2 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .languages {
+            margin-top: 12px;
+            font-style: italic;
+            font-size: 0.9rem;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eaeaea;
+            page-break-inside: avoid;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #4a6b8a;
+            page-break-after: avoid;
+        }
+        
+        /* Profil */
+        .profile {
+            background-color: #f9f9f9;
+        }
+        
+        /* Expérience */
+        .experience-item {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+        
+        .job-title {
+            font-weight: 500;
+            color: #4a6b8a;
+            margin: 4px 0;
+        }
+        
+        .date {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .responsibilities {
+            list-style-type: none;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .responsibilities li:before {
+            content: "•";
+            color: #4a6b8a;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Projets */
+        .project {
+            margin-bottom: 18px;
+            padding: 12px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 1rem;
+        }
+        
+        .project-details {
+            margin: 6px 0;
+            color: #555;
+            font-size: 0.9rem;
+        }
+        
+        /* Compétences */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 220px;
+        }
+        
+        .skill-category h3 {
+            color: #4a6b8a;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+        
+        .skill-list li:before {
+            content: "→";
+            color: #4a6b8a;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Styles d'impression */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                font-size: 12px;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: 100%;
+            }
+            
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            
+            .header h2 {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 15px 20px;
+                page-break-inside: avoid;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+            
+            .contact-info {
+                gap: 10px;
+            }
+            
+            .contact-item {
+                font-size: 0.8rem;
+            }
+            
+            .languages {
+                font-size: 0.8rem;
+            }
+            
+            .responsibilities li {
+                font-size: 0.85rem;
+            }
+            
+            .project-details {
+                font-size: 0.8rem;
+            }
+            
+            .skill-list li {
+                font-size: 0.85rem;
+            }
+            
+            /* Éviter les coupures indésirables */
+            .experience-item, .project {
+                page-break-inside: avoid;
+            }
+            
+            /* Forcer un saut de page avant certaines sections si nécessaire */
+            .section-title {
+                page-break-after: avoid;
+            }
+            
+            /* Ajuster les marges pour l'impression */
+            @page {
+                margin: 1cm;
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+            
+            .skills-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- En-tête -->
+        <header class="header">
+            <h1>Maha Mezghani-Khemakhem, PhD, PMP</h1>
+            <h2>Coordonnatrice de Recherche & Gestionnaire de Projets</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>Ottawa, ON, Canada</span>
+                </div>
+                <div class="contact-item">
+                    <span>+1 (613) 882-2375</span>
+                </div>
+                <div class="contact-item">
+                    <span>mmezghan@uottawa.ca</span>
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>LinkedIn: linkedin.com/in/maha-mezghani-khemakhem</span>
+                </div>
+                <div class="contact-item">
+                    <span>ResearchGate: researchgate.net/profile/Maha_MEZGHANI_KHEMAKHEM</span>
+                </div>
+            </div>
+            
+            <div class="languages">
+                Français (natif) | Arabe (natif) | Anglais (niveau professionnel fonctionnel, IELTS 6)
+            </div>
+        </header>
+
+        <!-- Profil professionnel -->
+        <section class="section profile">
+            <h2 class="section-title">PROFIL PROFESSIONNEL</h2>
+            <p>Coordonnatrice de recherche chevronnée avec plus de 20 ans d'expérience en <strong>gestion de projets de recherche</strong>, <strong>financement compétitif</strong> et <strong>développement de partenariats stratégiques</strong>. Certifiée PMP, j'ai coordonné plus de 10 projets internationaux, assuré la gestion d'équipes pluridisciplinaires, la rédaction et le suivi de subventions (Horizon Europe, PHC-UTIQUE, PSF-IRD, CMCU), ainsi que la mise en place de politiques en éthique, intégrité et EDI. J'ai activement participé à l'organisation de colloques scientifiques et à des activités de diffusion de la recherche.</p>
+        </section>
+
+        <!-- Expérience professionnelle -->
+        <section class="section">
+            <h2 class="section-title">EXPÉRIENCE PROFESSIONNELLE</h2>
+            
+            <div class="experience-item">
+                <div class="company">Université McGill — Campus Outaouais, Canada</div>
+                <div class="job-title">Professeure invitée</div>
+                <div class="date">Septembre 2025 — Avril 2026 (prévu)</div>
+                <ul class="responsibilities">
+                    <li>Enseignement du cours INDS 123 « Principes de la recherche » aux étudiants en médecine et sciences de la santé</li>
+                    <li>Intégration d'études de cas sur l'axe microbiote-intestin-cerveau pour illustrer les méthodologies de recherche</li>
+                    <li>Accompagnement des étudiants dans la formulation de questions de recherche et la préparation de projets</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Université d'Ottawa — Faculté des Sciences de la Santé, Canada</div>
+                <div class="job-title">Professeure à temps partiel</div>
+                <div class="date">Septembre 2024 — Décembre 2024</div>
+                <ul class="responsibilities">
+                    <li>Enseignement du cours « Mécanismes moléculaires de maladies » aux étudiants des cycles supérieurs</li>
+                    <li>Encadrement d'un projet de recherche : les étudiants devaient préparer une étude sur une maladie et en expliquer le mécanisme moléculaire</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Université de Tunis El Manar — Faculté des Sciences de Tunis, Tunisie</div>
+                <div class="job-title">Professeure & Coordinatrice scientifique</div>
+                <div class="date">Septembre 2002 — Juillet 2024</div>
+                <ul class="responsibilities">
+                    <li>Gestion et coordination de plus de 10 projets internationaux, avec obtention de financements compétitifs (> 500 000 $)</li>
+                    <li>Mise en place d'une veille stratégique active sur les programmes de financement nationaux et internationaux</li>
+                    <li>Encadrement de 17 étudiants aux cycles supérieurs (mastère, doctorat) et supervision de leurs projets de recherche (25 mémoires)</li>
+                    <li>Gestion et responsabilité de la plateforme technologique "Technologies des Acides Nucléiques" (acquisition d'équipements, formation, support technique)</li>
+                    <li>Développement de politiques internes (éthique, intégrité, EDI) et mise en place de plans de gestion des données</li>
+                    <li>Participation active au comité d'organisation de colloques et séminaires scientifiques</li>
+                    <li>Gestion de partenariats avec des institutions académiques, gouvernementales et privées</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Université de Bordeaux, France</div>
+                <div class="job-title">Professeure EMN-Online</div>
+                <div class="date">Depuis septembre 2019</div>
+                <ul class="responsibilities">
+                    <li>Enseignement dans le cadre du Master Euro-méditerranéen Neurosciences et Biotechnologies</li>
+                    <li>Contribution à la coordination pédagogique et à la supervision de projets de recherche étudiants</li>
+                    <li>Implication dans le réseau du master a facilité l'intégration au consortium ayant soumis et obtenu le projet PsyCoMed (Horizon Europe - RISE, 1,1 M$)</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="company">Université du Qatar, Qatar</div>
+                <div class="job-title">Professeure invitée</div>
+                <div class="date">Janvier 2015 — Juin 2015</div>
+                <ul class="responsibilities">
+                    <li>Enseignement de cours de génétique moléculaire avancée aux niveaux licence et doctorat</li>
+                    <li>Participation à la création de collaborations internationales en recherche</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projets de recherche -->
+        <section class="section">
+            <h2 class="section-title">PROJETS DE RECHERCHE & PARTENARIATS INTERNATIONAUX</h2>
+            
+            <div class="project">
+                <div class="project-title">Projet PsyCoMed | Troubles psychiatriques et comorbidités liées à la pollution en Méditerranée</div>
+                <div class="project-details"><strong>Programme:</strong> Horizon Europe - Marie Skłodowska-Curie Actions (RISE) | <strong>Budget:</strong> 1,1 M$</div>
+                <div class="project-details"><strong>Rôle:</strong> Membre du consortium - Pilotage scientifique, effet des polluants (microplastiques et glyphosate) sur l'axe intestin microbiome cerveau</div>
+                <div class="project-details"><strong>Période:</strong> 2023-2026</div>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">Projet PHC-UTIQUE | Prévention et gestion de la résistance aux insecticides</div>
+                <div class="project-details"><strong>Programme:</strong> Partenariat Hubert Curien (PHC-UTIQUE) | <strong>Budget:</strong> 25 k$</div>
+                <div class="project-details"><strong>Rôle:</strong> Chercheuse principale - Conception du projet, coordination avec l'Université du Mans (France), gestion du budget et reporting</div>
+                <div class="project-details"><strong>Période:</strong> 2019-2021</div>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">Projet ERIDAN | Évaluation du risque de dissémination de l'antibiorésistance dans les effluents tunisiens</div>
+                <div class="project-details"><strong>Programme:</strong> Actions Nord-Sud - MIO (Marseille, France) | <strong>Budget:</strong> 15 k$</div>
+                <div class="project-details"><strong>Rôle:</strong> Chercheuse principale - Conception du projet et pilotage scientifique, évaluation des risques et coordination des équipes</div>
+                <div class="project-details"><strong>Période:</strong> 2021</div>
+            </div>
+            
+            <div class="project">
+                <div class="project-title">Projet Tuniso-Mauritanien | Développement d'un biofongicide innovant pour le palmier dattier</div>
+                <div class="project-details"><strong>Programme:</strong> Coopération internationale Tuniso-Mauritanienne | <strong>Budget:</strong> 30 k$</div>
+                <div class="project-details"><strong>Rôle:</strong> Membre de l'équipe - Analyse du microbiote et valorisation de la recherche</div>
+                <div class="project-details"><strong>Période:</strong> 2023-2026</div>
+            </div>
+            
+            <p><strong>+ Expérience antérieure significative</strong><br>
+            Gestion et participation à d'autres projets de recherche nationaux et internationaux (1997-2013), notamment dans le cadre de partenariats CMCU avec l'INRA France, couvrant les domaines de la génétique des populations, de l'agronomie et de la gestion intégrée des ravageurs.</p>
+        </section>
+
+        <!-- Compétences clés -->
+        <section class="section">
+            <h2 class="section-title">COMPÉTENCES CLÉS</h2>
+            
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Gestion de projet</h3>
+                    <ul class="skill-list">
+                        <li>Coordination de projets de recherche</li>
+                        <li>Gestion d'équipes pluridisciplinaires</li>
+                        <li>Planification et suivi budgétaire</li>
+                        <li>Rédaction et gestion de subventions</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Politiques et conformité</h3>
+                    <ul class="skill-list">
+                        <li>Développement de politiques en éthique</li>
+                        <li>Intégrité scientifique</li>
+                        <li>EDI (Équité, Diversité, Inclusion)</li>
+                        <li>Gestion des données de recherche</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Compétences techniques</h3>
+                    <ul class="skill-list">
+                        <li>Biologie moléculaire</li>
+                        <li>Analyse bioinformatique</li>
+                        <li>MS Office 365, Teams, SharePoint</li>
+                        <li>Outils de gestion de projets</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implication administrative -->
+        <section class="section">
+            <h2 class="section-title">IMPLICATION ADMINISTRATIVE ET GOUVERNANCE</h2>
+            <ul class="responsibilities">
+                <li><strong>Membre du Bureau de gestion de projet (PMO)</strong>, Université Tunis El Manar : Harmonisation institutionnelle, coordination inter-services et optimisation des circuits de gestion (2023-2024)</li>
+                <li><strong>Membre de comités PAQ (DGSE, COCO, QE)</strong> : Amélioration de la qualité de la formation, de la recherche et de la gouvernance</li>
+                <li><strong>Coordinatrice académique</strong> : Mastère de Génétique et Immunologie (2019-2024) et mise en place du cycle ingénieur en bio-informatique (2019-2024)</li>
+                <li><strong>Membre de comités de qualité et d'accréditation</strong>, Faculté des Sciences de Tunis (2020-2024)</li>
+                <li><strong>Expérience de jury national</strong> : Concours de Maîtres de Conférences, Baccalauréat, prépas intégrées</li>
+                <li><strong>Membre élue du Conseil de département de Biologie</strong> (2017-2020)</li>
+            </ul>
+        </section>
+
+        <!-- Formation et certifications -->
+        <section class="section">
+            <h2 class="section-title">FORMATION ET CERTIFICATIONS</h2>
+            <ul class="responsibilities">
+                <li><strong>Project Management Professional (PMP)</strong> | Project Management Institute (PMI) | Mai 2025</li>
+                <li><strong>Soft skills</strong> | Iceberg | Mai 2022</li>
+                <li><strong>Praticien en Gestion de Projet TenStep</strong> | TenStep, Inc. | Novembre 2021</li>
+                <li><strong>Doctorat en Biologie (Génétique et Biologie Moléculaire)</strong> | Université de Tunis El Manar, Tunisie | 2003 (Équivalence WES Canada)</li>
+                <li><strong>M.Sc. (DEA) en Génétique et Biologie Moléculaire</strong> | Université de Tunis El Manar | 1999</li>
+                <li><strong>B.Sc. en Sciences Naturelles</strong> | Université de Tunis El Manar | 1997</li>
+            </ul>
+        </section>
+
+        <!-- Publications -->
+        <section class="section">
+            <h2 class="section-title">PUBLICATIONS SÉLECTIONNÉES</h2>
+            <p>Plus de 70 articles dans des revues internationales. Exemples :</p>
+            
+            <ul class="responsibilities">
+                <li><strong>Naccache, M., & Mezghani Khemakhem, M. (2025).</strong> Integrated statistical approach to wastewater analysis. Modeling Earth Systems and Environment. DOI: 10.1007/s40808-025-02500-1<br>
+                <em>→ Développement d'outils statistiques pour la gestion durable des eaux usées.</em></li>
+                
+                <li><strong>Naccache, M., ..., & Mezghani Khemakhem, M. (2025).</strong> Metagenomics-based analysis of resistance genes in treated wastewater. PeerJ. DOI: 10.7717/peerj.19682<br>
+                <em>→ Évaluation des risques de dissémination de l'antibiorésistance et implications pour la bioremédiation.</em></li>
+                
+                <li><strong>Dahnoun, D., ..., & Mezghani Khemakhem, M. (2024).</strong> Bioremediation potential of heavy-metal resistant bacteria.<br>
+                <em>→ Mise en évidence d'applications prometteuses pour la dépollution des sols agricoles.</em></li>
+            </ul>
+        </section>
+
+        <!-- Comités scientifiques -->
+        <section class="section">
+            <h2 class="section-title">PARTICIPATION À DES COMITÉS SCIENTIFIQUES</h2>
+            <ul class="responsibilities">
+                <li>Membre du <strong>GetGenome GGTunisia 2022</strong> (Comité scientifique)</li>
+                <li>Membre du <strong>Projet Génome Tunisie 2022-2035</strong> (Consortium GTCA, Task Force 4 : Éducation et Formation)</li>
+                <li>Membre du Comité scientifique <strong>DigiHealth 2022</strong></li>
+                <li>Membre du Comité scientifique de la <strong>CIFE8 (2014)</strong></li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
